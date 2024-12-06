@@ -59,7 +59,7 @@
     <center>
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid" style="background-color:#036;">
-                <span class="navbar-brand mb-0 h1" style="color:white;">SIGN IN</span>
+                <span class="navbar-brand mb-0 h1" style="color:white;">TA Management System (FAU)</span>
             </div>
         </nav>
         <!-- <h1 style="margin-top:4%;color:#533b78;"></h1><br> -->
@@ -129,7 +129,7 @@
                             if (usertype == "applicant") {
                                 window.location.href = "applicantHome";
                             } else if (usertype == "admin") {
-                                window.location.href = "adminHome";
+                                window.location.href = "admin";
                             } else if (usertype == "instructor") {
                                 window.location.href = "instructorHome";
                             } else if (usertype == "committee") {

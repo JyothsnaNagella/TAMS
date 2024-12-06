@@ -17,7 +17,7 @@ public class ApplicationForm extends HttpServlet{
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException { 
 	    try {
 		    Class.forName("com.mysql.jdbc.Driver");
-		    Connection connObject = DriverManager.getConnection("jdbc:mysql://127.8.9.0:3306/ta", "ta", "root");
+		    Connection connObject = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/ta", "root", "Tams@1234");
 		    PrintWriter printWriter = res.getWriter();
             Cookie[] cookies = req.getCookies();
             if (connObject != null) {
@@ -38,7 +38,7 @@ public class ApplicationForm extends HttpServlet{
                 if(username.equals("none")) {
                     req.getRequestDispatcher("/login.jsp").forward(req, res);
                 } else if(usertype.equals("admin")) {
-                    req.getRequestDispatcher("/adminHome.jsp").forward(req, res);
+                    req.getRequestDispatcher("/admin.jsp").forward(req, res);
                 } else if(usertype.equals("committee")) {
                     req.getRequestDispatcher("/committeeHome.jsp").forward(req, res);
                 } else if(usertype.equals("instructor")) {

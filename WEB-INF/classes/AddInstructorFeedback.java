@@ -12,9 +12,9 @@ public class AddInstructorFeedback extends HttpServlet {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       Connection connObject = DriverManager.getConnection(
-        "jdbc:mysql://127.8.9.0:3306/ta",
-        "ta",
-        "root"
+        "jdbc:mysql://127.0.0.1:3306/ta",
+        "root",
+        "Tams@1234"
       );
       PrintWriter printWriter = res.getWriter();
       Cookie[] cookies = req.getCookies();
@@ -37,7 +37,7 @@ public class AddInstructorFeedback extends HttpServlet {
         } else if (usertype.equals("committee")) {
           req.getRequestDispatcher("/committeeHome.jsp").forward(req, res);
         } else if (usertype.equals("admin")) {
-          req.getRequestDispatcher("/adminHome.jsp").forward(req, res);
+          req.getRequestDispatcher("/admin.jsp").forward(req, res);
         } else {
           int technicalSkill = Integer.parseInt(
             req.getParameter("technicalSkill")

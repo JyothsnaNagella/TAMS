@@ -11,7 +11,7 @@ public class Login extends HttpServlet{
 	  try 
 	  {
 		  Class.forName("com.mysql.jdbc.Driver");
-		  Connection connObject = DriverManager.getConnection("jdbc:mysql://127.8.9.0:3306/ta", "ta", "root");
+		  Connection connObject = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/ta", "root", "Tams@1234");
 			PrintWriter printWriter = res.getWriter();
             if (connObject != null) 
 			{
